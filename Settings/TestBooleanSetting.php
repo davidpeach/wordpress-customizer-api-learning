@@ -1,21 +1,9 @@
 <?php
 
-class TestBooleanSetting
+require_once __DIR__ . '/BaseSection.php';
+
+class TestBooleanSetting extends BaseSection
 {
-	private $section;
-
-	private $wp_customize;
-
-	public function addToSection($section)
-	{
-		$this->section = $section;
-	}
-
-	public function useCustomizerObject($wp_customize)
-	{
-		$this->wp_customize = $wp_customize;
-	}
-
 	public function register()
 	{
 		$this->wp_customize->add_setting( 'peach_test_boolean', array(
